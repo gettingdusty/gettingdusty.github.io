@@ -1,0 +1,199 @@
+/* =============================================
+   Getting Dusty — gettingdusty.github.io
+   Edit colors/fonts here to restyle the site
+   ============================================= */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Crimson Pro', serif;
+  background: #1A0E05;
+  color: #2C1A0E;
+}
+
+.site {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #FDFAF6;
+}
+
+/* --- HEADER --- */
+.hero {
+  background: #231309;
+  padding: 3.5rem 2.5rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg, transparent, transparent 38px,
+    rgba(255,255,255,0.018) 38px, rgba(255,255,255,0.018) 39px
+  );
+}
+.hero-inner { position: relative; }
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #A0724A;
+  margin-bottom: 0.6rem;
+}
+.site-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #F2E8D8;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+.tagline {
+  font-size: 17px;
+  font-weight: 300;
+  color: #7A5A3A;
+  font-style: italic;
+}
+.rule {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 180px;
+  margin: 1.4rem auto 0;
+}
+.rule-line { flex: 1; height: 1px; background: #4A2C14; }
+.rule-dot { width: 5px; height: 5px; border-radius: 50%; background: #A0724A; }
+
+/* --- SHARED --- */
+.label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #A0724A;
+  margin-bottom: 0.8rem;
+}
+
+/* --- STATEMENT --- */
+.statement {
+  padding: 2rem 2.5rem;
+  border-bottom: 1px solid #EDE3D5;
+}
+.statement p {
+  font-size: 18px;
+  line-height: 1.85;
+  color: #5A4030;
+  font-style: italic;
+  max-width: 680px;
+}
+
+/* --- GALLERY --- */
+.gallery { padding: 2rem 2.5rem 2.5rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.piece {
+  border: 1px solid #EDE3D5;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #FDFAF6;
+  transition: border-color 0.2s;
+}
+.piece:hover { border-color: #C9A070; }
+.piece.featured { grid-column: 1 / -1; }
+
+.piece img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.info { padding: 1rem 1.25rem; border-top: 1px solid #EDE3D5; }
+
+.info h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #2C1A0E;
+  margin-bottom: 3px;
+}
+.meta {
+  font-size: 13px;
+  color: #8A6A50;
+  margin-bottom: 6px;
+}
+.desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #5A4030;
+}
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.tags span {
+  font-size: 10px;
+  font-family: 'Crimson Pro', serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #F5ECD8;
+  color: #7A4A1E;
+  border: 1px solid #C9A070;
+}
+
+/* --- CONTACT --- */
+.contact {
+  background: #231309;
+  padding: 2rem 2.5rem;
+}
+.contact .label { color: #A0724A; }
+.contact-intro {
+  font-size: 17px;
+  color: #A08060;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.contact-links a {
+  color: #C9A070;
+  text-decoration: none;
+  font-size: 16px;
+  border-bottom: 1px solid #4A2C14;
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.contact-links a:hover { color: #F2E8D8; border-color: #A0724A; }
+
+/* --- FOOTER --- */
+footer {
+  background: #1A0E05;
+  text-align: center;
+  padding: 1.25rem;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #4A2C14;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 640px) {
+  .site-name { font-size: 34px; }
+  .grid { grid-template-columns: 1fr; }
+  .piece.featured { grid-column: 1; }
+  .hero, .statement, .gallery, .contact { padding-left: 1.25rem; padding-right: 1.25rem; }
+}
