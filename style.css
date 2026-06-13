@@ -38,6 +38,18 @@ body {
 .statement { padding: 2rem 2.5rem; border-bottom: 1px solid #EDE3D5; }
 .statement p { font-size: 18px; line-height: 1.85; color: #5A4030; font-style: italic; max-width: 680px; }
 
+.about { padding: 2.5rem; border-top: 1px solid #EDE3D5; }
+.about-grid { display: grid; grid-template-columns: 280px 1fr; gap: 2rem; align-items: start; }
+.about-photo img { width: 100%; border-radius: 12px; display: block; }
+.about-text h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 600; color: #2C1A0E; margin-bottom: 1rem; }
+.about-text p { font-size: 17px; line-height: 1.85; color: #5A4030; margin-bottom: 1rem; }
+.about-text p:last-child { margin-bottom: 0; }
+
+@media (max-width: 640px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-photo { max-width: 280px; margin: 0 auto; }
+}
+
 .gallery { padding: 2rem 2.5rem 2.5rem; }
 .gallery > .label { margin-bottom: 1.25rem; }
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
